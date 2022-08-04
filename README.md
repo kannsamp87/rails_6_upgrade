@@ -1,25 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# rails_6_upgrade
+Added bootboot plugin and introduced `RAILS_6_NEXT` env to handle the rails 6 changes and rails 5.2 changes
+* Gemfile.lock and Gemfile_next.lock files added
