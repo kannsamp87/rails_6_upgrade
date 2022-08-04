@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dghhbrki1
+  api_key: '996226212861285'
+  api_secret: 64qK0NOImI260Pc7fSSVdeSBjyI
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dghhbrki1
+  api_key: '996226212861285'
+  api_secret: 64qK0NOImI260Pc7fSSVdeSBjyI
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dghhbrki1
+  api_key: '996226212861285'
+  api_secret: 64qK0NOImI260Pc7fSSVdeSBjyI
+  enhance_image_tag: true
+  static_file_support: false

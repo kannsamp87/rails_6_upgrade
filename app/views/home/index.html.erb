@@ -1,0 +1,52 @@
+<script>
+    var pusher = new Pusher('3fe8fe7ec742a88eb121', {
+      cluster: 'us3',
+      encrypted: true
+    });
+</script>
+
+<div class="wrapper">
+    <div class="title">
+        <h1>Live blog with Ruby and Pusher - RAILS VERSION - <%= Rails.gem_version.to_s %></h1>
+        <h1>ENV Variable - <%= ENV["RAILS_6_NEXT"] %></h1>
+        <p>New posts will be displayed in realtime</p>    
+    </div>
+
+    <div class="posts" id="post_section">
+        <% @posts.each do |post| %>
+            <div class="post-card">
+                <img class="image" src="<%= post.media %>">
+                <div class="title">
+                    <h2><%= post.title %></h2>
+                </div>
+                <div class="body-trunc">
+                    <p><%= post.body %></p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<script>
+    var channel = pusher.subscribe('posts-channel');
+    channel.bind('new-post', function(data) {
+        let post_media = data.media;
+        let post_id = data.id
+        let post_body = data.body;
+        let post_title = data.title;
+
+        let div = document.getElementById('post_section');
+        let new_content = document.createElement("div");
+        new_content.innerHTML = `
+            <div class="post-card">
+                <img class="image" src="${post_media}">
+                <div class="title">
+                    <h2>${post_title}</h2>
+                </div>
+                <div class="body-trunc">
+                    <p>${post_body}</p>
+                </div>
+            </div>`;
+        div.insertBefore(new_content, div.firstChild);
+    });
+</script> 
