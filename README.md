@@ -1,6 +1,6 @@
 # README
 
-Added bootboot plugin and introduced `RAILS_6_NEXT` env to handle the rails 6 changes and rails 5.2 changes
+Added bootboot plugin and introduced `RAILS_6_NEXT` env to run the server in rails 6 and rails 5.2 with the backward compatibility.
 * Gemfile.lock and Gemfile_next.lock files added with the respective version changes
 * To handle the code changes can refer the `ENV["RAILS_6_NEXT"]` variable for the respective rails
 
