@@ -8,6 +8,8 @@ Added bootboot plugin and introduced `RAILS_6_NEXT` env to run the server in rai
 * To check the server and console in rails 5.2 - `rails s` and `rails c`
 * To check the server and console in rails 6.0 - `RAILS_6_NEXT=1 rails s` and `RAILS_6_NEXT=1 rails c`
 
-## Referred Articles
+## Reference Articles 
+`Though I went through many articles, listed below will explicitly highlight the importance of dual booting for the rails upgrade`
 * https://github.com/Shopify/bootboot
 * https://www.fastruby.io/blog/ruby/dual-boot/generating-gemfile-next-lock.html
+* https://blog.grio.com/2022/06/rails-conference-2022-and-the-dual-boot-upgrade-strategy.html
